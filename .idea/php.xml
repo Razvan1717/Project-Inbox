@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/composer" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/Project_Inbox_Symfony/vendor/doctrine/dbal" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />
+</project>
