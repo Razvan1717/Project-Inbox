@@ -136,6 +136,7 @@ class Person
         $this->addresses = new ArrayCollection();
         $this->phones = new ArrayCollection();
         $this->emails = new ArrayCollection();
+        $this->groups = new ArrayCollection();
     }
 
     /**
@@ -195,12 +196,38 @@ class Person
     {
         $this->emails = $emails;
     }
-//    /**
-//     * @return string
-//     */
-//    public function __toString()
-//    {
-//        return $this->firstName . ' - ' . $this->lastName;
-//    }
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Groups", inversedBy="persons")
+     * @ORM\JoinTable(name="persons_groups")
+     */
+    private $groups;
+
+    /**
+     * @return mixed
+     */
+    public function getGroups()
+    {
+        return $this->groups;
+    }
+
+    /**
+     * @param mixed $groups
+     * @return Person
+     */
+    public function setGroups($groups)
+    {
+        $this->groups = $groups;
+        return $this;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->id . '/';
+    }
 
 }
