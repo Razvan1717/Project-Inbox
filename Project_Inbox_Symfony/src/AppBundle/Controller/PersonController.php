@@ -120,9 +120,11 @@ class PersonController extends Controller
         }
         $phoneToShow .= '</ul>';
 
+        $modifyPerson = '<a href=/'. $person->getId() .'/modifyPerson>Edit data</a>';
        return new Response('
        <ul>
             Be careful, if you click here you will delete this person !!<a href="/'.$person->getId().'/deletePerson">Delete</a>!!
+           <br>Click here if you want to edit personal data-> '.$modifyPerson.'
             <li>Id: ' . $person->getId() .'</li>
             <li>First Name: '. $person->getFirstName() .'</li>
             <li>Last Name: '. $person->getLastName() .'</li>
