@@ -90,7 +90,7 @@ class PersonController extends Controller
             $city = 'City: ' .$address->getCity() . '<br>';
             $street = 'Street: ' .$address->getStreet() . '<br>';
             $house = 'House: ' .$address->getHouse() .'<br>';
-            $deleteAddress = '<a href=/'.$person . $address->getId().'/deleteAddress>(Delete this address)</a>';
+            $deleteAddress = '<a href=/'.$person->getId().'/'. $address->getId().'/deleteAddress>(Delete this address)</a>';
             $addressToShow .= '<li>'. $city .' - ' . $street .' - ' . $house .$deleteAddress.'</li>';
         }
         $addressToShow .= '</ul>';
@@ -103,7 +103,7 @@ class PersonController extends Controller
         foreach($emails as $email){
             $data = $email->getEmailAddress() . '<br>';
             $emailType = 'Type: ' .$email->getType() . '<br>';
-            $deleteEmail = '<a href=/'.$person . $email->getId().'/deleteEmail>(Delete this email)</a>';
+            $deleteEmail = '<a href=/'.$person->getId().'/' . $email->getId().'/deleteEmail>(Delete this email)</a>';
             $emailToShow .='<li>' . $emailType. $data .$deleteEmail.'</li>';
         }
         $emailToShow .= '</ul>';
@@ -115,7 +115,7 @@ class PersonController extends Controller
         foreach($phones as $phone){
             $number = $phone->getPhoneNumber() . '<br>';
             $phoneType = 'Type: '. $phone->getType() . '<br>';
-            $deletePhone = '<a href=/'.$person . $phone->getId().'/deletePhone>(Delete this phone)</a>';
+            $deletePhone = '<a href=/'.$person->getId().'/' . $phone->getId().'/deletePhone>(Delete this phone)</a>';
             $phoneToShow .='<li>' . $phoneType . $number .$deletePhone .'</li>';
         }
         $phoneToShow .= '</ul>';

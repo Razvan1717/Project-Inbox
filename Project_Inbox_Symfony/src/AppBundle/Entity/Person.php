@@ -221,13 +221,34 @@ class Person
         return $this;
     }
 
-
+    /**
+     * @param Groups $group
+     */
+    public function addPersonGroup(Groups $group)
+    {
+        if ($this->groups->contains($group)) {
+            return;
+        }
+        $this->groups->add($group);
+        $group->addPerson($this);
+    }
+    /**
+     * @param Groups $group
+     */
+    public function removePersonGroup(Groups $group)
+    {
+        if (!$this->groups->contains($group)) {
+            return;
+        }
+        $this->groups->removeElement($group);
+        $group->removePerson($this);
+    }
     /**
      * @return string
      */
     public function __toString()
     {
-        return $this->id . '/';
+        return $this->firstName . ' ' . $this->lastName;
     }
 
 }

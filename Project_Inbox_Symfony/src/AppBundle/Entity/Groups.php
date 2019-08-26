@@ -22,6 +22,12 @@ class Groups
      */
     private $id;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="group_name", type="string", length=255)
+     */
+    private $groupName;
 
     /**
      * Get id.
@@ -32,13 +38,6 @@ class Groups
     {
         return $this->id;
     }
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="group_name", type="string", length=255)
-     */
-    private $groupName;
 
     /**
      * @return string
@@ -60,12 +59,13 @@ class Groups
 
 
     /**
+     * @var Person[]
      * @ORM\ManyToMany(targetEntity="Person", mappedBy="groups")
      */
     private $persons;
 
     /**
-     * @return mixed
+     * @return Person[]
      */
     public function getPersons()
     {
@@ -87,4 +87,27 @@ class Groups
         $this->persons = new ArrayCollection();
     }
 
+    /**
+     * @param Person $person
+     */
+    public function addPerson(Person $person)
+    {
+        if ($this->persons->contains($person)) {
+            return;
+        }
+        $this->persons->add($person);
+        $person->addPersonGroup($this);
+    }
+
+    /**
+     * @param Person $person
+     */
+    public function removePerson(Person $person)
+    {
+        if (!$this->persons->contains($person)) {
+            return;
+        }
+        $this->persons->removeElement($person);
+        $person->removePersonGroup($this);
+    }
 }
