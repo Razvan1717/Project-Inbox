@@ -13,6 +13,14 @@
                 <th>Groupname</th>
                 <td>{{ group.groupName }}</td>
             </tr>
+            <tr>
+                <th>Persons of this group:</th>
+                <td>
+                {% for person in group.persons %}
+                    <li><a href="../{{ person.id }}">{{ person.firstName }} {{ person.lastName }}</a></li>
+                {% endfor %}
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -23,6 +31,7 @@
         <li>
             <a href="{{ path('groups_edit', { 'id': group.id }) }}">Edit</a>
         </li>
+
         <li>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Delete">

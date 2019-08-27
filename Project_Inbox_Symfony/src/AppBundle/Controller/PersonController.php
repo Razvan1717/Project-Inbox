@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use AppBundle\Entity\Groups;
+
 
 class PersonController extends Controller
 {
@@ -121,7 +123,7 @@ class PersonController extends Controller
         $phoneToShow .= '</ul>';
 
         $modifyPerson = '<a href=/'. $person->getId() .'/modifyPerson>Edit data</a>';
-       return new Response('
+        return new Response('
        <ul>
             Be careful, if you click here you will delete this person !!<a href="/'.$person->getId().'/deletePerson">Delete</a>!!
            <br>Click here if you want to edit personal data-> '.$modifyPerson.'
@@ -132,10 +134,12 @@ class PersonController extends Controller
            <li>Address: '. $addressToShow . '</li><a href="/'.$person->getId().'/addAddress">Add new Address</a>
            <li>Email: ' .$emailToShow. '</li><a href="/'.$person->getId().'/addEmail">Add new Email</a>
            <li>Phone: ' . $phoneToShow.'</li><a href="/' .$person->getId() .'/addPhone">Add new Phone</a>
+           <li><a href="/groups">Groups!</a></li>
        </ul>
       
        <a href="/">Click here if you want to see all persons</a>');
     }
+
     /**
      * @Route("/")
      */

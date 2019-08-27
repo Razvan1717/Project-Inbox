@@ -2,7 +2,7 @@
 
 {% block body %}
     <h1>Group edit</h1>
-
+{#    ,{'action':path('groups_show',{'id':group.id})}#}
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
         <input type="submit" value="Edit" />

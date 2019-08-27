@@ -66,7 +66,7 @@ class GroupsController extends Controller
     /**
      * Finds and displays a group entity.
      *
-     * @Route("/{id}", name="groups_show", methods={"GET"})
+     * @Route("/{id}", name="groups_show", methods={"GET", "POST"})
      */
     public function showAction(Groups $group)
     {
@@ -88,11 +88,21 @@ class GroupsController extends Controller
         $deleteForm = $this->createDeleteForm($group);
         $editForm = $this->createForm('AppBundle\Form\GroupsType', $group);
         $editForm->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
+            /** @var @Groups $group */
+            $group = $editForm->getData();
+            foreach ($group->getPersons() as $selectedPerson) {
+                $selectedPerson->addPersonGroup($group);
+                $em->persist($selectedPerson);
+            }
+            $em->persist($group);
+            $em->flush();
 
-            return $this->redirectToRoute('groups_edit', array('id' => $group->getId()));
+
+            return $this->redirectToRoute('groups_show', array('id' => $group->getId()));
         }
 
         return $this->render('groups/edit.html.twig', array(
